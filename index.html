@@ -328,37 +328,6 @@ toc: false
 							</p>
 						</article>
 						
-						<h2 id="prospective">Prospective Students</h2>
-						<p class="archive__subtitle">I’m recruiting students to join my research group.</p>
-
-						{% include feature_row id="prospective_cards" type="left" %}
-
-						{% assign prospective_cards = site.empty %} <!-- keeps Liquid happy -->
-						{% capture _prospective_cards %}
-						prospective_cards:
-						  - image_path: /images/pic03.jpg
-  							alt: "Massive black hole binaries"
-    						title: "Massive Black Hole Binaries"
-    						excerpt: "Dynamics & accretion in galactic nuclei."
-  						  - image_path: /images/pic03.jpg
-    						alt: "Protoplanet accretion"
-    						title: "Protoplanet Accretion (3D)"
-    						excerpt: "High-res 3D RHD with FARGO3D + AREPO."
-  						  - image_path: /images/pic03.jpg
-    						alt: "Obliquity dynamics"
-    						title: "Obliquity Dynamics"
-    						excerpt: "Spin–orbit evolution with tides & rheology."
-  						  - image_path: /images/pic03.jpg
-    						alt: "Stellar triples"
-    						title: "Stellar Triples in the Field"
-    						excerpt: "Few-body dynamics with Galactic/nuclear tides."
-  						  - image_path: /images/pic03.jpg
-    						alt: "Impact simulations"
-    						title: "Impact Simulations (Solid/Fluid)"
-    						excerpt: "Voronoi mesh, EOS, and solid mechanics for impacts."
-						{% endcapture %}
-						{% assign page = page | merge: (_prospective_cards | split: '\n' | join: '\n' | jsonify | from_json ) %}
-
 						<!-- Here is the "Prospective Students" card. -->
 						<article id="prospective">
 							<h2 class="major">Prospective Students</h2>
@@ -484,6 +453,7 @@ toc: false
 
 	</body>
 </html>
+
 
 
 
